@@ -1,0 +1,19 @@
+{
+  "name": "ibrahimlaouer_3_11032022",
+  "version": "1.0.0",
+  "description": "OC Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wibmw/IbrahimLAOUER_3_11032022.git"
+  },
+  "author": "ILAOUER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wibmw/IbrahimLAOUER_3_11032022/issues"
+  },
+  "homepage": "https://github.com/wibmw/IbrahimLAOUER_3_11032022#readme"
+}
