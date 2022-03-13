@@ -2,9 +2,10 @@
   "name": "ibrahimlaouer_3_11032022",
   "version": "1.0.0",
   "description": "OC Projet 3",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "repository": {
     "type": "git",

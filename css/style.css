@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:100,900i");
+body {
+  background-color: white;
+  font-family: Roboto;
+  box-sizing: border-box;
+  max-width: 1450px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
