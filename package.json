@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/wibmw/IbrahimLAOUER_3_11032022/issues"
   },
-  "homepage": "https://github.com/wibmw/IbrahimLAOUER_3_11032022#readme"
+  "homepage": "https://github.com/wibmw/IbrahimLAOUER_3_11032022#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

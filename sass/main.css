@@ -7,7 +7,8 @@
 body {
   background-color: white;
   font-family: Roboto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: 1024px;
   min-width: 360px;
   width: 100%;
@@ -15,15 +16,23 @@ body {
 }
 
 /******************* Boxing Element************************/
-.boxing, #restaurants, #fonctionnement {
+.boxing, #fonctionnement, #restaurants {
   padding: 10px 0px 20px 40px;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /******************* HEADER ************************/
@@ -38,8 +47,11 @@ header {
   border: 0;
   border-top-width: 3px;
   border-style: solid;
-  border-image: linear-gradient(0deg, #e5e5e5 0%, #cccccc 100%) 1;
+  -o-border-image: linear-gradient(0deg, #e5e5e5 0%, #cccccc 100%) 1;
+     border-image: -webkit-gradient(linear, left bottom, left top, from(#e5e5e5), to(#cccccc)) 1;
+     border-image: linear-gradient(0deg, #e5e5e5 0%, #cccccc 100%) 1;
 }
+
 .localisation pre {
   font-family: "Roboto";
   font-size: 17px;
@@ -50,22 +62,28 @@ header {
   background-color: #F2F2F2;
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px;
 }
+
 .header-accueil h1 {
   font-size: 25px;
   font-weight: 900;
 }
+
 .header-accueil h4 {
   font-size: 20px;
   font-weight: 500;
 }
+
 .header-accueil_header-button {
   color: white;
   background: #9356DC;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 15px;
   font-weight: 400;
   padding: 15px 30px 15px 30px;
@@ -78,21 +96,24 @@ header {
 #fonctionnement {
   width: 100%;
 }
+
 #fonctionnement .steps-container {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   gap: 30px;
 }
+
 #fonctionnement .steps-container .step-template {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   min-width: 200px;
   max-width: 50%;
   width: 100%;
@@ -102,8 +123,10 @@ header {
   text-decoration: none;
   background: #F2F2F2;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #fonctionnement .steps-container .step-template span {
   position: absolute;
   background: #9356DC;
@@ -111,30 +134,35 @@ header {
   font-size: 15px;
   font-weight: 500;
   padding: 3px 8px 3px 8px;
-  border-radius: 50%/50%;
+  border-radius: 50% / 50%;
   z-index: 2;
   margin-left: -43px;
   margin-top: -5px;
 }
+
 #fonctionnement .steps-container .step-template i {
   color: #737373;
   font-size: larger;
   margin-top: -2px;
 }
+
 #fonctionnement .steps-container .step-template div {
   margin-left: 20px;
   font-size: 15px;
   font-weight: 900;
   color: black;
 }
+
 #fonctionnement .steps-container .step-template--active {
   background: #e4d5f6;
 }
+
 #fonctionnement .steps-container .step-template--active i {
   color: #9356DC;
 }
+
 #fonctionnement .steps-container::after {
-  content: " ";
+  content: ' ';
   margin-bottom: 20px;
 }
 
@@ -142,60 +170,74 @@ header {
 #restaurants {
   background: #F2F2F2;
 }
+
 #restaurants .rest-container {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   /*width: 100%;*/
   padding-bottom: 80px;
   gap: 30px;
 }
+
 #restaurants .rest-container a {
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-decoration: none;
   color: black;
   max-width: 360px;
   width: 90%;
   height: 280px;
 }
+
 #restaurants .rest-container a img {
   width: 100%;
   height: calc(100% - 80px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
+
 #restaurants .rest-container a .rest-desc {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px 0px 0px 20px;
 }
+
 #restaurants .rest-container a .rest-desc span {
   font-weight: bolder;
   line-height: 30px;
 }
+
 #restaurants .rest-container a i {
   font-size: 20px;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row-reverse nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
   margin-top: -30px;
   margin-right: 20px;
   text-shadow: 0 0 3px black;
   color: white;
 }
+
 #restaurants .rest-container a .active {
   text-shadow: 0 0 0px rgba(0, 0, 0, 0);
-  background: -moz-linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background: -webkit-linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -203,29 +245,37 @@ header {
 /******************* FOOTER ************************/
 footer {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   background-color: #2c2c2c;
   padding: 40px;
   /*width: 100%;*/
 }
+
 footer img {
   width: 150px;
-  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
+
 footer ul {
   padding: 0;
 }
+
 footer ul li {
   list-style: none;
   line-height: 35px;
 }
+
 footer ul li i {
   color: white;
   padding-right: 10px;
 }
+
 footer ul li a {
   text-decoration: none;
   color: white;
@@ -234,7 +284,10 @@ footer ul li a {
 @media only screen and (min-width: 900px) {
   /******************* FONCTIONNEMENT ************************/
   #fonctionnement .steps-container {
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     width: 100%;
     padding-bottom: 80px;
   }
@@ -242,11 +295,13 @@ footer ul li a {
     max-width: 23%;
   }
 }
+
 @media (min-width: 700px) and (max-width: 1023px) {
   /******************* FONCTIONNEMENT ************************/
   #fonctionnement .steps-container {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+/*@mixin {
+
+}*/
+
+/******************* Global Flex ************************/
+
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  @mixin wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  @mixin nowrap {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
