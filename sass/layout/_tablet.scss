@@ -8,5 +8,12 @@
     }
 
 
+    #restaurants {
+        & .rest-container {
+            & a {
+                width: 35%;
+            }
+        }
+    }
 }
 

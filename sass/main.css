@@ -16,7 +16,7 @@ body {
 }
 
 /******************* Boxing Element************************/
-.boxing, #fonctionnement, #restaurants {
+.boxing, #fonctionnement {
   padding: 10px 0px 20px 40px;
 }
 
@@ -171,6 +171,10 @@ header {
   background: #F2F2F2;
 }
 
+#restaurants h2 {
+  padding: 30px 0px 0px 40px;
+}
+
 #restaurants .rest-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,6 +306,9 @@ footer ul li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #restaurants .rest-container a {
+    width: 35%;
   }
 }
 /*# sourceMappingURL=main.css.map */
