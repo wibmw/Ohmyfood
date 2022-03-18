@@ -1,0 +1,37 @@
+/******************* COLORED BUTTON ************************/
+.colored-button {
+    color: white;
+    background: $color-pri;
+    background: linear-gradient(0deg, $color-pri 0%, $color-sec 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 15px 30px 15px 30px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    display: inline-block;
+    &:hover {
+        background: linear-gradient(0deg, lighten($color-pri, 5%) 0%, lighten($color-sec, 5%) 100%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+}
+
+/******************* NEW MENU ************************/
+.new-menu {                
+    @include flex;
+    flex-flow: row-reverse nowrap;
+    & p {
+        box-sizing: border-box;
+        position: absolute;
+        align-self: flex-end;
+        width: 100px;
+        height: 30px;
+        font-weight: 900;
+        background-color: #4df3eb;
+        color: darken(#0dbab1, 10%);
+        text-align: center;
+        padding-top: 5px;
+        border-radius: 5px;
+        margin: 0px 10px -45px 0px;
+    }
+}

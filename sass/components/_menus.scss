@@ -1,0 +1,103 @@
+/******************* MENU ************************/
+.menu-title {
+    font-weight: 500;
+    &::after { 
+        content: "";
+        position: absolute;
+        display: block;
+        background: none repeat scroll 0 0 transparent;
+        height: 3px;
+        width: 45px; 
+        background: $color-ter;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        margin-top: 3px;
+      }      
+}
+
+.menus-container {
+    @include flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    position:relative;
+    
+    & .menu-template {
+        @include flex;
+        @include nowrap;
+        position:relative;
+        min-width: 200px;
+        max-width: 95%;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        & .menu-desc {
+            width: 90%;
+            min-width:0;
+            padding: 10px;
+            @include flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 900;
+            & .menu-name {
+                width: 100%;
+                margin-left: auto;
+                font-weight: 900;
+            }
+            & span {
+                font-size: 13px;
+                font-weight: 500;
+                max-width: 80%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; 
+            }
+        }   
+        & .menu-selection { 
+            justify-content: center;
+            align-items: center;
+            color:darken($back-color, 50%);
+            font-size: larger;
+            width: 15%;
+            color: white;
+            background: $color-ter;
+            border-radius: 0px 15px 15px 0px;
+            animation:right-entrance 1s both;
+            display: none;
+            & i {
+
+                @include checkicon-animation("spinicon");
+
+            }
+
+            
+        }
+        &:hover {
+            & .menu-selection {
+                position:relative;
+                @include flex;
+
+            }
+
+        }
+
+        animation:menu-delay 3s both;
+    
+
+    }        
+    @for $i from 1 through $num-menu {
+            .load--#{$i} {
+                animation-delay: calc($menu-anim-delay * $i);
+             }
+        }
+    &::after {
+        content: ' ';
+        margin-bottom: 20px;
+    }
+}
+

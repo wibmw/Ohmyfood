@@ -20,3 +20,48 @@
     -webkit-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
+
+/******************* Fav Icon ************************/
+@mixin inactive-heart {
+  @include flex;
+  flex-flow: row-reverse nowrap;
+  font-size: 20px;
+  text-shadow: 0 0 3px rgba(0,0,0,1);
+  color:white;
+  transition:1s;
+}
+
+@mixin active-heart {
+  text-shadow: 0 0 0px rgba(0,0,0,0);
+  background:-moz-linear-gradient(0deg, $color-sec 0%, $color-pri 100%); 
+  background: -webkit-linear-gradient(0deg, $color-sec 0%, $color-pri 100%); 
+  background: linear-gradient(0deg, $color-sec 0%, $color-pri 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+}
+
+/******************* Animation ************************/
+@mixin checkicon-animation($name) {
+  -webkit-animation-name:$name;
+  -webkit-animation-timing-function:ease;
+  -webkit-animation-duration:1s;
+  animation-name:$name;
+  animation-timing-function:ease;
+  animation-duration:1s;
+}
+
+@mixin transform($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  transform: $type;
+}
+
+@mixin transform-origin($type) {
+  -webkit-transform-origin: $type;
+  -moz-transform-origin: $type;
+  -ms-transform-origin: $type;
+  transform-origin: $type;
+}

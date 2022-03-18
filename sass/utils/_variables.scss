@@ -2,3 +2,7 @@ $back-color: #F2F2F2;
 $color-pri: #9356DC;
 $color-sec: #FF79DA;
 $color-ter: #99E2D0;
+
+$num-menu: 3;
+$menu-anim-dur: 2000ms;
+$menu-anim-delay: calc($menu-anim-dur / $num-menu);

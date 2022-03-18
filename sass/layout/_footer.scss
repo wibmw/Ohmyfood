@@ -1,0 +1,27 @@
+/******************* FOOTER ************************/
+
+footer {
+    @include flex;
+    flex-flow: column nowrap;
+    background-color: #2c2c2c;
+    
+    padding: 40px;
+    /*width: 100%;*/
+    & img { width: 150px;filter: brightness(0) invert(1);}
+    & ul {
+        padding: 0;
+        & li {
+        list-style: none;
+        line-height: 35px;
+            & i {
+                color: white;
+                padding-right: 10px;
+            }
+            & a {
+                text-decoration: none;
+                color: white;
+            }
+        } 
+    }
+}
+  

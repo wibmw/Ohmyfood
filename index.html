@@ -18,18 +18,26 @@
 </head>
 
 <body>
-
-    <header >
-        <!-- *****LOGO***** -->
-        <div>
-            <img id="logo"  src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
+<!-- *****LOADER***** -->
+    <div class="loader">
+        <div class="loader__itemContainer">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
-        <!-- *****HEADER***** -->
-        <div class="localisation"><pre> <i class="fas fa-map-marker-alt  map-marker"></i>   Paris, Belleville</pre></div>
-        <div class="header-accueil">
-            <h1>Réservez le menu qui<br> vous conviens</h1>
-            <h4>Découvrez des restaurant d'exceptions,<br> sélectionnés par nos soins.</h4>
-            <div class="header-accueil_header-button">Explorez nos restaurants</div>
+      </div>
+
+      <header >
+        <div class="home-header">
+            <!-- *****LOGO***** -->
+            <div>
+                <img class="home-header_logo"  src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
+            </div>
+            <!-- *****HEADER***** -->
+            <div class="home-header_localisation"><pre> <i class="fas fa-map-marker-alt  map-marker"></i>   Paris, Belleville</pre></div>
+            <div class="home-header_desc">
+                <h1>Réservez le menu qui<br> vous conviens</h1>
+                <h4>Découvrez des restaurant d'exceptions,<br> sélectionnés par nos soins.</h4>
+                <div class="colored-button">Explorez nos restaurants</div>
+            </div>
         </div>
     </header>
 
@@ -37,31 +45,33 @@
     <!-- *****SECTION FONCTIONNEMENT***** -->
         <section id="fonctionnement" >
             <h2>Fonctionnement</h2>
-            <div class="steps-container">
-            <a class="step-template" >
-                <span>1</span>
-                <i class="fas fa-2x1 fa-mobile-alt "></i>
-                <div>Choisissez un restaurant</div>
-            </a>
-            <a class=" step-template" >
-                <span>2</span>
-                <i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>
-                <div>Composez votre menu</div>
-            </a>
-            <a class="step-template step-template--active">
-                <span>3</span>
-                <i class="fas fa-store"></i>
-                <div>Déguster au restaurant</div>
-            </a>
+            <div class="steps">
+                <a class="steps_template" >
+                    <span>1</span>
+                    <i class="fas fa-2x1 fa-mobile-alt "></i>
+                    <div>Choisissez un restaurant</div>
+                </a>
+                <a class="steps_template" >
+                    <span>2</span>
+                    <i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>
+                    <div>Composez votre menu</div>
+                </a>
+                <a class="steps_template steps_template--active">
+                    <span>3</span>
+                    <i class="fas fa-store"></i>
+                    <div>Déguster au restaurant</div>
+                </a>
             </div>
         </section>
 
     <!-- *****SECTION RESTAURANTS***** -->
         <section id="restaurants">
             <h2>Restaurants</h2><br>
-            <div class="rest-container">
-            <a href="#">
+            <div class="rest">
+            <a href="./menu1.html">
+                <div class="new-menu"><p>Nouveau</p></div>
                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                
                 <div class="rest-desc">
                     <span>La palette du goût</span>
                     <div>Ménilmontant</div>
@@ -69,6 +79,7 @@
                 <i class="fas fa-heart"></i>
             </a>
             <a href="#">
+                <div class="new-menu"><p>Nouveau</p></div>
                 <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                 <div class="rest-desc">
                     <span>La note enchantée</span>
@@ -95,7 +106,7 @@
         </div>
         </section>
     </main>
-<!-- *****FOOTER***** -->
+
     <!-- *****FOOTER***** -->
     <footer>
         <img  src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">

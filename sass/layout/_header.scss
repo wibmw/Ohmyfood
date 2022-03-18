@@ -1,7 +1,46 @@
-header {
-    display: flex;
-    flex-wrap:wrap;
-    flex-flow: column;
-    align-items: center;
+/******************* HEADER ************************/
 
+header {
+     .logo-header {
+        @include flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        & a {
+            font-size: 20px;
+            color: black;
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        & img { margin-right:auto; }
+    }
+    .menu-header {
+        background-image: url('./../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        background-size: cover;
+        height: 300px;
+        @include flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+
+        & div {
+            @include flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            background-color: $back-color;
+            padding-top: 30px;
+            width: 100%;
+            border-radius: 40px 40px 0px 0px;
+            font-family: "Shrikhand";
+            font-size: 25px;
+            margin-bottom: -2px;
+    
+            & i {
+                font-size: 20px;
+                @include inactive-heart;              
+                &:hover {  @include active-heart; }  
+            }
+        }
+    }
 }
