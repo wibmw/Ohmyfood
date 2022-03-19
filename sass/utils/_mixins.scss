@@ -1,7 +1,3 @@
-/*@mixin {
-
-}*/
-
 /******************* Global Flex ************************/
 
 @mixin flex {
@@ -21,7 +17,7 @@
     flex-wrap: nowrap;
   }
 
-/******************* Fav Icon ************************/
+/******************* Like Icon ************************/
 @mixin inactive-heart {
   @include flex;
   flex-flow: row-reverse nowrap;

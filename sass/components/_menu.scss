@@ -14,13 +14,14 @@
       }      
 }
 
-.menus-container {
+.menus {
     @include flex;
     flex-flow: column nowrap;
     gap: 15px;
     position:relative;
+    animation:menu-delay 3s both;
     
-    & .menu-template {
+    & .menus_card {
         @include flex;
         @include nowrap;
         position:relative;
@@ -34,8 +35,8 @@
         background-color: white;
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-        & .menu-desc {
+        
+        & .menus_card_desc {
             width: 90%;
             min-width:0;
             padding: 10px;
@@ -44,7 +45,7 @@
             justify-content: space-between;
             align-items: baseline;
             font-weight: 900;
-            & .menu-name {
+            & .menus_card_desc_name {
                 width: 100%;
                 margin-left: auto;
                 font-weight: 900;
@@ -58,7 +59,7 @@
                 text-overflow: ellipsis; 
             }
         }   
-        & .menu-selection { 
+        & .menus_card_selection { 
             justify-content: center;
             align-items: center;
             color:darken($back-color, 50%);
@@ -69,32 +70,20 @@
             border-radius: 0px 15px 15px 0px;
             animation:right-entrance 1s both;
             display: none;
-            & i {
-
-                @include checkicon-animation("spinicon");
-
-            }
-
-            
+            & i { @include checkicon-animation("spinicon");  }
         }
         &:hover {
-            & .menu-selection {
+            & .menus_card_selection {
                 position:relative;
                 @include flex;
-
             }
-
         }
-
-        animation:menu-delay 3s both;
-    
-
     }        
     @for $i from 1 through $num-menu {
-            .load--#{$i} {
-                animation-delay: calc($menu-anim-delay * $i);
-             }
+        .load--#{$i} {
+            animation-delay: calc($menu-anim-delay * $i);
         }
+    }
     &::after {
         content: ' ';
         margin-bottom: 20px;

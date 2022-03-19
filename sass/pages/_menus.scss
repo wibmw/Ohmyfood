@@ -1,0 +1,15 @@
+/******************* MENU SECTIONS ************************/
+#entree, #plats, #desserts {
+    box-sizing: border-box;
+    padding: 10px 0 0 10px;
+    width: 100%;
+    background: $back-color;
+}
+
+/******************* CENTER COMMAND BUTTON ************************/
+.command-button {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    background: $back-color;
+}

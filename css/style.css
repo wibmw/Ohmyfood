@@ -1,8 +1,5 @@
-/*@mixin {
-
-}*/
 /******************* Global Flex ************************/
-/******************* Fav Icon ************************/
+/******************* Like Icon ************************/
 /******************* Animation ************************/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:100,900i");
@@ -150,8 +147,8 @@ body {
   width: 100px;
   height: 30px;
   font-weight: 900;
-  background-color: #4df3eb;
-  color: #0a8a84;
+  background-color: #99E2D0;
+  color: #32b091;
   text-align: center;
   padding-top: 5px;
   border-radius: 5px;
@@ -174,7 +171,7 @@ body {
   margin-top: 3px;
 }
 
-.menus-container {
+.menus {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -182,8 +179,9 @@ body {
   flex-flow: column nowrap;
   gap: 15px;
   position: relative;
+  animation: menu-delay 3s both;
 }
-.menus-container .menu-template {
+.menus .menus_card {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -201,9 +199,8 @@ body {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  animation: menu-delay 3s both;
 }
-.menus-container .menu-template .menu-desc {
+.menus .menus_card .menus_card_desc {
   width: 90%;
   min-width: 0;
   padding: 10px;
@@ -216,12 +213,12 @@ body {
   align-items: baseline;
   font-weight: 900;
 }
-.menus-container .menu-template .menu-desc .menu-name {
+.menus .menus_card .menus_card_desc .menus_card_desc_name {
   width: 100%;
   margin-left: auto;
   font-weight: 900;
 }
-.menus-container .menu-template .menu-desc span {
+.menus .menus_card .menus_card_desc span {
   font-size: 13px;
   font-weight: 500;
   max-width: 80%;
@@ -229,7 +226,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menus-container .menu-template .menu-selection {
+.menus .menus_card .menus_card_selection {
   justify-content: center;
   align-items: center;
   color: #737373;
@@ -241,7 +238,7 @@ body {
   animation: right-entrance 1s both;
   display: none;
 }
-.menus-container .menu-template .menu-selection i {
+.menus .menus_card .menus_card_selection i {
   -webkit-animation-name: "spinicon";
   -webkit-animation-timing-function: ease;
   -webkit-animation-duration: 1s;
@@ -249,23 +246,23 @@ body {
   animation-timing-function: ease;
   animation-duration: 1s;
 }
-.menus-container .menu-template:hover .menu-selection {
+.menus .menus_card:hover .menus_card_selection {
   position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
 }
-.menus-container .load--1 {
+.menus .load--1 {
   animation-delay: 666.6666666667ms;
 }
-.menus-container .load--2 {
+.menus .load--2 {
   animation-delay: 1333.3333333333ms;
 }
-.menus-container .load--3 {
+.menus .load--3 {
   animation-delay: 2000ms;
 }
-.menus-container::after {
+.menus::after {
   content: " ";
   margin-bottom: 20px;
 }
@@ -463,7 +460,7 @@ footer ul li a {
   left: 12px;
 }
 
-/******************* HEADER ************************/
+/******************* HEADER ACCUEIL ************************/
 .home-header {
   display: flex;
   flex-wrap: wrap;
@@ -634,10 +631,21 @@ footer ul li a {
 }
 
 /******************* MENU SECTIONS ************************/
-#entree {
+#entree, #plats, #desserts {
   box-sizing: border-box;
   padding: 10px 0 0 10px;
   width: 100%;
+  background: #F2F2F2;
+}
+
+/******************* CENTER COMMAND BUTTON ************************/
+.command-button {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #F2F2F2;
 }
 

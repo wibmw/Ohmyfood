@@ -27,8 +27,8 @@
         width: 100px;
         height: 30px;
         font-weight: 900;
-        background-color: #4df3eb;
-        color: darken(#0dbab1, 10%);
+        background-color: $color-ter;
+        color: darken($color-ter, 30%);
         text-align: center;
         padding-top: 5px;
         border-radius: 5px;

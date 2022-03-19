@@ -1,8 +1,5 @@
-/*@mixin {
-
-}*/
 /******************* Global Flex ************************/
-/******************* Fav Icon ************************/
+/******************* Like Icon ************************/
 /******************* Animation ************************/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:100,900i");
@@ -211,8 +208,8 @@ body {
   width: 100px;
   height: 30px;
   font-weight: 900;
-  background-color: #4df3eb;
-  color: #0a8a84;
+  background-color: #99E2D0;
+  color: #32b091;
   text-align: center;
   padding-top: 5px;
   border-radius: 5px;
@@ -237,7 +234,7 @@ body {
   margin-top: 3px;
 }
 
-.menus-container {
+.menus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,9 +244,11 @@ body {
           flex-flow: column nowrap;
   gap: 15px;
   position: relative;
+  -webkit-animation: menu-delay 3s both;
+          animation: menu-delay 3s both;
 }
 
-.menus-container .menu-template {
+.menus .menus_card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,11 +266,9 @@ body {
   border-radius: 15px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-animation: menu-delay 3s both;
-          animation: menu-delay 3s both;
 }
 
-.menus-container .menu-template .menu-desc {
+.menus .menus_card .menus_card_desc {
   width: 90%;
   min-width: 0;
   padding: 10px;
@@ -291,13 +288,13 @@ body {
   font-weight: 900;
 }
 
-.menus-container .menu-template .menu-desc .menu-name {
+.menus .menus_card .menus_card_desc .menus_card_desc_name {
   width: 100%;
   margin-left: auto;
   font-weight: 900;
 }
 
-.menus-container .menu-template .menu-desc span {
+.menus .menus_card .menus_card_desc span {
   font-size: 13px;
   font-weight: 500;
   max-width: 80%;
@@ -306,7 +303,7 @@ body {
   text-overflow: ellipsis;
 }
 
-.menus-container .menu-template .menu-selection {
+.menus .menus_card .menus_card_selection {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -324,7 +321,7 @@ body {
   display: none;
 }
 
-.menus-container .menu-template .menu-selection i {
+.menus .menus_card .menus_card_selection i {
   -webkit-animation-name: "spinicon";
   -webkit-animation-timing-function: ease;
   -webkit-animation-duration: 1s;
@@ -333,29 +330,29 @@ body {
   animation-duration: 1s;
 }
 
-.menus-container .menu-template:hover .menu-selection {
+.menus .menus_card:hover .menus_card_selection {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.menus-container .load--1 {
+.menus .load--1 {
   -webkit-animation-delay: calc($menu-anim-delay * $i);
           animation-delay: calc($menu-anim-delay * $i);
 }
 
-.menus-container .load--2 {
+.menus .load--2 {
   -webkit-animation-delay: calc($menu-anim-delay * $i);
           animation-delay: calc($menu-anim-delay * $i);
 }
 
-.menus-container .load--3 {
+.menus .load--3 {
   -webkit-animation-delay: calc($menu-anim-delay * $i);
           animation-delay: calc($menu-anim-delay * $i);
 }
 
-.menus-container::after {
+.menus::after {
   content: ' ';
   margin-bottom: 20px;
 }
@@ -618,7 +615,7 @@ footer ul li a {
   left: 12px;
 }
 
-/******************* HEADER ************************/
+/******************* HEADER ACCUEIL ************************/
 .home-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -832,11 +829,25 @@ footer ul li a {
 }
 
 /******************* MENU SECTIONS ************************/
-#entree {
+#entree, #plats, #desserts {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0 0 10px;
   width: 100%;
+  background: #F2F2F2;
+}
+
+/******************* CENTER COMMAND BUTTON ************************/
+.command-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #F2F2F2;
 }
 
