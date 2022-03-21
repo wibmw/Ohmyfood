@@ -9,7 +9,6 @@
 /******************* CENTER COMMAND BUTTON ************************/
 .command-button {
     @include flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     background: $back-color;
 }

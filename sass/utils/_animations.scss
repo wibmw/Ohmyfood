@@ -1,3 +1,4 @@
+/******************* LOADER ************************/
 @keyframes loader {
     100% {
       opacity: 0;
@@ -27,7 +28,8 @@
           transform: rotate(360deg);
         }
       }
-      
+
+/******************* Like Ico, ************************/
 @-webkit-keyframes spinicon {
     from,to  { -webkit-transform: rotateZ(-180deg) rotateY(0deg) rotateZ(0deg);}
     15%      { -webkit-transform: rotateZ(-90deg);}
@@ -44,6 +46,8 @@
     }
 }
 
+
+/******************* Menu Selection ************************/
 @-webkit-keyframes right-entrance {
     from,to  {  right: -10%;}
 	100%      { right: 0%;}
@@ -56,6 +60,7 @@
     }
 }
 
+/******************* Menu apparition ************************/
 @-webkit-keyframes menu-delay {
     from,to  {  
         opacity: 0;

@@ -1,5 +1,8 @@
 /******************* LOADER ************************/
 .loader {
+    @include flex;
+    align-items:center;
+    justify-content:space-evenly;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -8,10 +11,6 @@
     background-color: white;
     animation: loader 2s 3s both;
     z-index: 10000;
-    display:flex;
-    align-items:center;
-    justify-content:space-evenly;
- 
   }
 
 .lds-roller {
@@ -33,97 +32,52 @@
             background: $color-pri;
             margin: -4px 0 0 -4px;
             }
-        &:nth-child(1) {
-            animation-delay: -0.036s;
-            &:after {
-                top: 63px;
-                left: 63px;
-                }
-            }
-        &:nth-child(2) {
-            animation-delay: -0.072s;
-            &:after {
-                top: 68px;
-                left: 56px;
-                }
-            }
-        &:nth-child(3) {
-            animation-delay: -0.108s;
-            &:after {
-                top: 71px;
-                left: 48px;
-                }
-            }
-        &:nth-child(4) {
-            animation-delay: -0.144s;
-            &:nth-child(4):after {
-                top: 72px;
-                left: 40px;
-                }
-            }
-        &:nth-child(5) {
-            animation-delay: -0.18s;
-            &:after {
-                top: 71px;
-                left: 32px;
-                }
-            }
-        &:nth-child(6) {
-            animation-delay: -0.216s;
-            &:after {
-                top: 68px;
-                left: 24px;
-                }
-            }
-        &:nth-child(7) {
-            animation-delay: -0.252s;
-            &:after {
-                top: 63px;
-                left: 17px;
-                }
-            }
-        &:nth-child(8) {
-            animation-delay: -0.288s;
-            &:after {
-                top: 56px;
-                left: 12px;
-                }
-            }
-        }
+        &:nth-child(1) {@include loader-anim (-0.036s, 63px, 63px);}
+        &:nth-child(2) {@include loader-anim (-0.072s, 68px, 56px);}
+        &:nth-child(3) {@include loader-anim (-0.108s, 71px, 48px);}
+        &:nth-child(4) {@include loader-anim (-0.144s, 72px, 40px);}
+        &:nth-child(5) {@include loader-anim (-0.18s, 71px, 32px);}
+        &:nth-child(6) {@include loader-anim (-0.216s, 68px, 24px);}
+        &:nth-child(7) {@include loader-anim (-0.252s, 63px, 17px);}
+        &:nth-child(8) {@include loader-anim (-0.288s, 56px, 12px);}
+    }
 }
 
 
 /******************* HEADER ACCUEIL ************************/
 .home-header {
-    display: flex;
-    flex-wrap:wrap;
+    @include flex;
     flex-flow: column;
     align-items: center;
 
     &_logo {
-        padding: 20px 0px 10px 0px;
+        @include align-center;
+        position: relative;
+        box-shadow: 0px 5px 5px -2px rgb(0 0 0 / 45%);
+        bottom:1px;
+        z-index: 1000;
+        
+        & img {
+            padding: 20px 0px 10px 0px;
+        }
     }
-    
+            
+
     &_localisation {
         background-color: darken($back-color, 5%);
-        width: 100%;
-        text-align: center;
-        border: 0;
-        border-top-width:3px;
-        border-style: solid;
+        @include align-center;
         border-image: linear-gradient(0deg, darken($back-color, 5%) 0%, darken($back-color, 15%) 100%) 1;   
-    
+
         & pre {
             font-family: "Roboto";
             font-size: 17px;
             font-weight: bolder;
         }
     }
-    
+
     &_desc {
+        @include align-center;
         background-color: $back-color;
-        text-align: center;
-        width: 100%;
         box-sizing: border-box;
         padding: 20px;
         & h1 { font-size: 25px; font-weight: 900;}
@@ -203,7 +157,7 @@
 
     & .rest {
         @include flex;
-        flex-flow: row wrap;
+        @include wrap;
         justify-content: space-evenly;
         width: 100%;
         padding-bottom: 80px;

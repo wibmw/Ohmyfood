@@ -1,5 +1,4 @@
 /******************* Global Flex ************************/
-
 @mixin flex {
     display: -webkit-box;
     display: -moz-box;
@@ -17,10 +16,20 @@
     flex-wrap: nowrap;
   }
 
+  @mixin flex-nowrap {
+    @include flex;
+    @include nowrap;
+  }
+
+  @mixin flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+
 /******************* Like Icon ************************/
 @mixin inactive-heart {
-  @include flex;
-  flex-flow: row-reverse nowrap;
+  @include flex-nowrap;
+  flex-direction: row-reverse;
   font-size: 20px;
   text-shadow: 0 0 3px rgba(0,0,0,1);
   color:white;
@@ -60,4 +69,19 @@
   -moz-transform-origin: $type;
   -ms-transform-origin: $type;
   transform-origin: $type;
+}
+
+/******************* Loader ************************/
+@mixin loader-anim ($delai, $top, $left){
+  animation-delay: $delai;
+  &:after {
+      top: $top;
+      left: $left;
+      }
+}
+
+/******************* Center of the page ************************/
+@mixin align-center {
+  width: 100%;
+  text-align: center;
 }

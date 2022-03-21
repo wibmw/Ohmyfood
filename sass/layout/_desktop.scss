@@ -1,12 +1,35 @@
-@media  only screen and (min-width: 900px) {
+@media   (min-width: 1024px) {
 /******************* FONCTIONNEMENT ************************/
     #fonctionnement  {
-        & .steps-container {
+        & .steps {
             flex-flow: row wrap;
             width: 100%;
-            padding-bottom: 80px ;
-            & .step-template {
-                max-width:23%
+            padding-bottom: 40px ;
+            &_template {
+                max-width:24%
+            }
+        }
+    }
+/******************* MENU ************************/
+    #entree, #plats, #desserts {
+        @include flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        & .menu-title::after {
+            position: relative;
+            width: 100%;
+        }
+    
+        & .menus {
+            width: 450px;
+        }
+    
+    }
+
+    header {
+        & .menu-header {
+            & div {
+                justify-content: center;
             }
         }
     }

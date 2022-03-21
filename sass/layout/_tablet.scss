@@ -2,7 +2,7 @@
 
 /******************* FONCTIONNEMENT ************************/
     #fonctionnement  {
-        & .steps-container {
+        & .steps{
             align-items: center;
         }
     }
@@ -14,6 +14,23 @@
                 width: 35%;
             }
         }
+    }
+
+/******************* MENU ************************/
+    #entree, #plats, #desserts {
+        @include flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        & .menu-title::after {
+            position: relative;
+            width: 100%;
+        }
+
+        & .menus {
+            width: 450px;
+        
+        }
+
     }
 }
 

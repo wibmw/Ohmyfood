@@ -17,8 +17,8 @@
 .menus {
     @include flex;
     flex-flow: column nowrap;
-    gap: 15px;
     position:relative;
+    gap: 15px;
     animation:menu-delay 3s both;
     
     & .menus_card {
@@ -41,7 +41,7 @@
             min-width:0;
             padding: 10px;
             @include flex;
-            flex-flow: row wrap;
+            @include wrap;
             justify-content: space-between;
             align-items: baseline;
             font-weight: 900;
@@ -59,17 +59,17 @@
                 text-overflow: ellipsis; 
             }
         }   
-        & .menus_card_selection { 
+        & .menus_card_selection {
+            display: none; 
             justify-content: center;
             align-items: center;
-            color:darken($back-color, 50%);
             font-size: larger;
             width: 15%;
             color: white;
             background: $color-ter;
             border-radius: 0px 15px 15px 0px;
             animation:right-entrance 1s both;
-            display: none;
+            
             & i { @include checkicon-animation("spinicon");  }
         }
         &:hover {

@@ -1,6 +1,11 @@
+/******************* COLORS ************************/
+/******************* Animation ************************/
 /******************* Global Flex ************************/
 /******************* Like Icon ************************/
 /******************* Animation ************************/
+/******************* Loader ************************/
+/******************* Center of the page ************************/
+/******************* LOADER ************************/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:100,900i");
 @keyframes loader {
@@ -31,6 +36,7 @@
     transform: rotate(360deg);
   }
 }
+/******************* Like Ico, ************************/
 @-webkit-keyframes spinicon {
   from, to {
     -webkit-transform: rotateZ(-180deg) rotateY(0deg) rotateZ(0deg);
@@ -62,6 +68,7 @@
     transform: rotateZ(0deg);
   }
 }
+/******************* Menu Selection ************************/
 @-webkit-keyframes right-entrance {
   from, to {
     right: -10%;
@@ -78,6 +85,7 @@
     right: 0%;
   }
 }
+/******************* Menu apparition ************************/
 @-webkit-keyframes menu-delay {
   from, to {
     opacity: 0;
@@ -177,8 +185,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
-  gap: 15px;
   position: relative;
+  gap: 15px;
   animation: menu-delay 3s both;
 }
 .menus .menus_card {
@@ -208,7 +216,8 @@ body {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   font-weight: 900;
@@ -227,16 +236,15 @@ body {
   text-overflow: ellipsis;
 }
 .menus .menus_card .menus_card_selection {
+  display: none;
   justify-content: center;
   align-items: center;
-  color: #737373;
   font-size: larger;
   width: 15%;
   color: white;
   background: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   animation: right-entrance 1s both;
-  display: none;
 }
 .menus .menus_card .menus_card_selection i {
   -webkit-animation-name: "spinicon";
@@ -273,7 +281,8 @@ header .logo-header {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   height: 60px;
@@ -295,7 +304,8 @@ header .menu-header {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   align-items: flex-end;
 }
 header .menu-header div {
@@ -303,7 +313,8 @@ header .menu-header div {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   background-color: #F2F2F2;
@@ -316,11 +327,14 @@ header .menu-header div {
 }
 header .menu-header div i {
   font-size: 20px;
+  padding-left: 30px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row-reverse nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
   font-size: 20px;
   text-shadow: 0 0 3px black;
   color: white;
@@ -370,6 +384,12 @@ footer ul li a {
 
 /******************* LOADER ************************/
 .loader {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -378,9 +398,6 @@ footer ul li a {
   background-color: white;
   animation: loader 2s 3s both;
   z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 .lds-roller {
@@ -427,7 +444,7 @@ footer ul li a {
 .lds-roller div:nth-child(4) {
   animation-delay: -0.144s;
 }
-.lds-roller div:nth-child(4):nth-child(4):after {
+.lds-roller div:nth-child(4):after {
   top: 72px;
   left: 40px;
 }
@@ -462,21 +479,28 @@ footer ul li a {
 
 /******************* HEADER ACCUEIL ************************/
 .home-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
   flex-flow: column;
   align-items: center;
 }
 .home-header_logo {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.45);
+  bottom: 1px;
+  z-index: 1000;
+}
+.home-header_logo img {
   padding: 20px 0px 10px 0px;
 }
 .home-header_localisation {
   background-color: #e5e5e5;
   width: 100%;
   text-align: center;
-  border: 0;
-  border-top-width: 3px;
-  border-style: solid;
   border-image: linear-gradient(0deg, #e5e5e5 0%, #cccccc 100%) 1;
 }
 .home-header_localisation pre {
@@ -485,9 +509,9 @@ footer ul li a {
   font-weight: bolder;
 }
 .home-header_desc {
-  background-color: #F2F2F2;
-  text-align: center;
   width: 100%;
+  text-align: center;
+  background-color: #F2F2F2;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -576,7 +600,8 @@ footer ul li a {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
   padding-bottom: 80px;
@@ -611,7 +636,9 @@ footer ul li a {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  flex-flow: row-reverse nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
   font-size: 20px;
   text-shadow: 0 0 3px black;
   color: white;
@@ -649,25 +676,63 @@ footer ul li a {
   background: #F2F2F2;
 }
 
-@media only screen and (min-width: 900px) {
+@media (min-width: 1024px) {
   /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps-container {
+  #fonctionnement .steps {
     flex-flow: row wrap;
     width: 100%;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
-  #fonctionnement .steps-container .step-template {
-    max-width: 23%;
+  #fonctionnement .steps_template {
+    max-width: 24%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
+  }
+
+  header .menu-header div {
+    justify-content: center;
   }
 }
 @media (min-width: 700px) and (max-width: 1023px) {
   /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps-container {
+  #fonctionnement .steps {
     align-items: center;
   }
 
   #restaurants .rest-container a {
     width: 35%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
   }
 }
 
