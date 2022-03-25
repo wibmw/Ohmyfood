@@ -398,66 +398,6 @@ footer ul li a {
   color: white;
 }
 
-@media (min-width: 1024px) {
-  /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps {
-    flex-flow: row wrap;
-    width: 100%;
-    padding-bottom: 2.7rem;
-    justify-content: center;
-  }
-  #fonctionnement .steps_template {
-    max-width: 24%;
-  }
-
-  /******************* MENU ************************/
-  #entree, #plats, #desserts {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
-    position: relative;
-    width: 100%;
-  }
-  #entree .menus, #plats .menus, #desserts .menus {
-    width: 450px;
-  }
-
-  header .menu-header div {
-    justify-content: center;
-  }
-}
-@media (min-width: 700px) and (max-width: 1023px) {
-  /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps {
-    align-items: center;
-  }
-
-  #restaurants .rest a {
-    width: 35%;
-  }
-
-  /******************* MENU ************************/
-  #entree, #plats, #desserts {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
-    position: relative;
-    width: 100%;
-  }
-  #entree .menus, #plats .menus, #desserts .menus {
-    width: 450px;
-  }
-}
 /******************* LOADER ************************/
 .loader {
   display: -webkit-box;
@@ -726,6 +666,67 @@ footer ul li a {
   justify-content: center;
   align-items: center;
   background: #F2F2F2;
+}
+
+@media (min-width: 1024px) {
+  /******************* FONCTIONNEMENT ************************/
+  #fonctionnement .steps {
+    flex-flow: row wrap;
+    width: 100%;
+    padding-bottom: 2.7rem;
+    justify-content: center;
+  }
+  #fonctionnement .steps_template {
+    max-width: 24%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
+  }
+
+  header .menu-header div {
+    justify-content: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  /******************* FONCTIONNEMENT ************************/
+  #fonctionnement .steps {
+    align-items: center;
+  }
+
+  #restaurants .rest a {
+    width: 35%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
