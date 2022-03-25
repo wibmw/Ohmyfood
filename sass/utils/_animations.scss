@@ -31,7 +31,7 @@
 
 /******************* Like Ico, ************************/
 @-webkit-keyframes spinicon {
-    from,to  { -webkit-transform: rotateZ(-180deg) rotateY(0deg) rotateZ(0deg);}
+    from,to  { -webkit-transform: rotateZ(-180deg);}
     15%      { -webkit-transform: rotateZ(-90deg);}
 	100%      { -webkit-transform: rotateZ(0deg);}
   }@keyframes spinicon {
