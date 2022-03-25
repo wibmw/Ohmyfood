@@ -2,7 +2,7 @@
 /******************* Animation ************************/
 /******************* Global Flex ************************/
 /******************* Like Icon ************************/
-/******************* Animation ************************/
+/******************* Animations ************************/
 /******************* Loader ************************/
 /******************* Center of the page ************************/
 /******************* LOADER ************************/
@@ -69,20 +69,44 @@
   }
 }
 /******************* Menu Selection ************************/
-@-webkit-keyframes right-entrance {
+@-webkit-keyframes right-in {
   from, to {
-    right: -10%;
+    width: 0;
+    right: -15%;
   }
   100% {
+    width: 15%;
     right: 0%;
   }
 }
-@keyframes right-entrance {
+@keyframes right-in {
   from, to {
-    right: -10%;
+    width: 0;
+    right: -15%;
   }
   100% {
+    width: 15%;
     right: 0%;
+  }
+}
+@-webkit-keyframes right-out {
+  from, to {
+    width: 15%;
+    right: 0%;
+  }
+  100% {
+    width: 0;
+    right: -15%;
+  }
+}
+@keyframes right-out {
+  from, to {
+    width: 15%;
+    right: 0%;
+  }
+  100% {
+    width: 0%;
+    right: -15%;
   }
 }
 /******************* Menu apparition ************************/
@@ -119,20 +143,18 @@ body {
 /******************* Boxing Element************************/
 .boxing, #fonctionnement {
   box-sizing: border-box;
-  padding: 10px 0px 20px 40px;
+  padding: 1.3rem;
 }
 
 /******************* COLORED BUTTON ************************/
 .colored-button {
   color: white;
-  background: #9356DC;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 15px;
-  font-weight: 400;
-  padding: 15px 30px 15px 30px;
-  margin-bottom: 40px;
-  border-radius: 30px;
+  font-size: 1em;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 2rem;
   display: inline-block;
 }
 .colored-button:hover {
@@ -152,15 +174,15 @@ body {
   box-sizing: border-box;
   position: absolute;
   align-self: flex-end;
-  width: 100px;
-  height: 30px;
+  width: 6.7rem;
+  height: 2rem;
   font-weight: 900;
   background-color: #99E2D0;
   color: #32b091;
   text-align: center;
   padding-top: 5px;
   border-radius: 5px;
-  margin: 0px 10px -45px 0px;
+  margin: 0 0.7rem -3rem 0;
 }
 
 /******************* MENU ************************/
@@ -169,13 +191,10 @@ body {
 }
 .menu-title::after {
   content: "";
-  position: absolute;
   display: block;
-  background: none repeat scroll 0 0 transparent;
   height: 3px;
-  width: 45px;
+  width: 3rem;
   background: #99E2D0;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
   margin-top: 3px;
 }
 
@@ -185,8 +204,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
-  position: relative;
-  gap: 15px;
+  gap: 1rem;
   animation: menu-delay 3s both;
 }
 .menus .menus_card {
@@ -196,22 +214,15 @@ body {
   display: flex;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: relative;
-  min-width: 200px;
-  max-width: 95%;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  text-decoration: none;
+  font-size: 0.9em;
   overflow: hidden;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .menus .menus_card .menus_card_desc {
   width: 90%;
-  min-width: 0;
-  padding: 10px;
+  padding: 0.7rem;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -225,10 +236,9 @@ body {
 .menus .menus_card .menus_card_desc .menus_card_desc_name {
   width: 100%;
   margin-left: auto;
-  font-weight: 900;
 }
 .menus .menus_card .menus_card_desc span {
-  font-size: 13px;
+  font-size: 0.9em;
   font-weight: 500;
   max-width: 80%;
   white-space: nowrap;
@@ -236,30 +246,32 @@ body {
   text-overflow: ellipsis;
 }
 .menus .menus_card .menus_card_selection {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-size: larger;
-  width: 15%;
-  color: white;
-  background: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  animation: right-entrance 1s both;
-}
-.menus .menus_card .menus_card_selection i {
-  -webkit-animation-name: "spinicon";
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-duration: 1s;
-  animation-name: "spinicon";
-  animation-timing-function: ease;
-  animation-duration: 1s;
-}
-.menus .menus_card:hover .menus_card_selection {
-  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: larger;
+  color: white;
+  background: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 1s ease-in-out;
+  right: -15%;
+  width: 0;
+}
+.menus .menus_card:hover .menus_card_selection {
+  right: 0;
+  width: 15%;
+}
+.menus .menus_card:hover .menus_card_selection i {
+  -webkit-animation-name: "spinicon";
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-name: "spinicon";
+  animation-timing-function: ease;
+  animation-duration: 2s;
 }
 .menus .load--1 {
   animation-delay: 666.6666666667ms;
@@ -272,7 +284,7 @@ body {
 }
 .menus::after {
   content: " ";
-  margin-bottom: 20px;
+  margin-bottom: 1.3rem;
 }
 
 /******************* HEADER ************************/
@@ -281,31 +293,38 @@ header .logo-header {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 4rem;
 }
 header .logo-header a {
-  font-size: 20px;
+  font-size: 1.3em;
   color: black;
   margin-right: auto;
-  margin-left: 20px;
+  margin-left: 1.3rem;
 }
 header .logo-header img {
   margin-right: auto;
 }
+header .menu1-bg {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+header .menu2-bg {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+header .menu3-bg {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+header .menu4-bg {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
 header .menu-header {
-  background-image: url("./../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: cover;
   height: 300px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   align-items: flex-end;
 }
 header .menu-header div {
@@ -313,21 +332,19 @@ header .menu-header div {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
   background-color: #F2F2F2;
-  padding-top: 30px;
+  padding-top: 2rem;
   width: 100%;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 2.7rem 2.7rem 0 0;
   font-family: "Shrikhand";
-  font-size: 25px;
+  font-size: 1.6em;
   margin-bottom: -2px;
 }
 header .menu-header div i {
-  font-size: 20px;
-  padding-left: 30px;
+  font-size: 1.3em;
+  padding-left: 2rem;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -335,7 +352,7 @@ header .menu-header div i {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   flex-direction: row-reverse;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-shadow: 0 0 3px black;
   color: white;
   transition: 1s;
@@ -359,8 +376,7 @@ footer {
   display: flex;
   flex-flow: column nowrap;
   background-color: #2c2c2c;
-  padding: 40px;
-  /*width: 100%;*/
+  padding: 2.7rem;
 }
 footer img {
   width: 150px;
@@ -371,17 +387,77 @@ footer ul {
 }
 footer ul li {
   list-style: none;
-  line-height: 35px;
+  line-height: 2.2rem;
 }
 footer ul li i {
   color: white;
-  padding-right: 10px;
+  padding-right: 0.7rem;
 }
 footer ul li a {
   text-decoration: none;
   color: white;
 }
 
+@media (min-width: 1024px) {
+  /******************* FONCTIONNEMENT ************************/
+  #fonctionnement .steps {
+    flex-flow: row wrap;
+    width: 100%;
+    padding-bottom: 2.7rem;
+    justify-content: center;
+  }
+  #fonctionnement .steps_template {
+    max-width: 24%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
+  }
+
+  header .menu-header div {
+    justify-content: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  /******************* FONCTIONNEMENT ************************/
+  #fonctionnement .steps {
+    align-items: center;
+  }
+
+  #restaurants .rest a {
+    width: 35%;
+  }
+
+  /******************* MENU ************************/
+  #entree, #plats, #desserts {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
+    position: relative;
+    width: 100%;
+  }
+  #entree .menus, #plats .menus, #desserts .menus {
+    width: 450px;
+  }
+}
 /******************* LOADER ************************/
 .loader {
   display: -webkit-box;
@@ -408,7 +484,7 @@ footer ul li a {
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) 5;
-  transform-origin: 40px 40px;
+  transform-origin: 2.7rem 2.7rem;
 }
 .lds-roller div:after {
   content: " ";
@@ -491,50 +567,41 @@ footer ul li a {
   text-align: center;
   position: relative;
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.45);
-  bottom: 1px;
-  z-index: 1000;
 }
 .home-header_logo img {
-  padding: 20px 0px 10px 0px;
+  padding: 1.3rem 0 0.7rem 0;
 }
 .home-header_localisation {
   background-color: #e5e5e5;
   width: 100%;
   text-align: center;
-  border-image: linear-gradient(0deg, #e5e5e5 0%, #cccccc 100%) 1;
 }
 .home-header_localisation pre {
   font-family: "Roboto";
-  font-size: 17px;
+  font-size: 1.2em;
   font-weight: bolder;
 }
 .home-header_desc {
   width: 100%;
   text-align: center;
   background-color: #F2F2F2;
-  box-sizing: border-box;
-  padding: 20px;
 }
 .home-header_desc h1 {
-  font-size: 25px;
-  font-weight: 900;
+  font-size: 1.5em;
 }
 .home-header_desc h4 {
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
 /******************* FONCTIONNEMENT ************************/
-#fonctionnement {
-  width: 100%;
-}
 #fonctionnement .steps {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   flex-flow: column nowrap;
-  gap: 30px;
+  gap: 2rem;
 }
 #fonctionnement .steps_template {
   display: -webkit-box;
@@ -543,26 +610,19 @@ footer ul li a {
   display: flex;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  min-width: 200px;
-  max-width: 50%;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  padding: 30px;
+  font-size: 1em;
+  padding: 2rem;
   text-decoration: none;
   background: #F2F2F2;
-  border-radius: 20px;
+  border-radius: 1.3rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #fonctionnement .steps_template span {
   position: absolute;
   background: #9356DC;
   color: white;
-  font-size: 15px;
-  font-weight: 500;
   padding: 3px 8px 3px 8px;
   border-radius: 50%/50%;
-  z-index: 2;
   margin-left: -43px;
   margin-top: -5px;
 }
@@ -572,8 +632,7 @@ footer ul li a {
   margin-top: -2px;
 }
 #fonctionnement .steps_template div {
-  margin-left: 20px;
-  font-size: 15px;
+  margin-left: 1.2rem;
   font-weight: 900;
   color: black;
 }
@@ -583,17 +642,14 @@ footer ul li a {
 #fonctionnement .steps_template--active i {
   color: #9356DC;
 }
-#fonctionnement .steps::after {
-  content: " ";
-  margin-bottom: 20px;
-}
 
 /******************* RESTAURANTS ************************/
 #restaurants {
   background: #F2F2F2;
+  padding-bottom: 5.3rem;
 }
 #restaurants h2 {
-  padding: 30px 0px 0px 40px;
+  padding: 2rem 0 0 2.7rem;
 }
 #restaurants .rest {
   display: -webkit-box;
@@ -603,12 +659,10 @@ footer ul li a {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 100%;
-  padding-bottom: 80px;
-  gap: 30px;
+  gap: 2rem;
 }
 #restaurants .rest a {
-  border-radius: 20px;
+  border-radius: 1.3rem;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-decoration: none;
@@ -619,17 +673,16 @@ footer ul li a {
 }
 #restaurants .rest a img {
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 5.2rem);
   object-fit: cover;
-  border-radius: 20px 20px 0 0;
+  border-radius: 1.3rem 1.3rem 0 0;
 }
 #restaurants .rest a .rest-desc {
-  box-sizing: border-box;
-  padding: 10px 0px 0px 20px;
+  padding: 0.7rem 0px 0px 1.3rem;
 }
 #restaurants .rest a .rest-desc span {
   font-weight: bolder;
-  line-height: 30px;
+  line-height: 2rem;
 }
 #restaurants .rest a i {
   display: -webkit-box;
@@ -639,12 +692,12 @@ footer ul li a {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   flex-direction: row-reverse;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-shadow: 0 0 3px black;
   color: white;
   transition: 1s;
-  margin-top: -30px;
-  margin-right: 20px;
+  margin-top: -2rem;
+  margin-right: 1.2rem;
 }
 #restaurants .rest a i:hover {
   text-shadow: 0 0 0px rgba(0, 0, 0, 0);
@@ -660,8 +713,7 @@ footer ul li a {
 /******************* MENU SECTIONS ************************/
 #entree, #plats, #desserts {
   box-sizing: border-box;
-  padding: 10px 0 0 10px;
-  width: 100%;
+  padding: 0.7rem 0.7rem 0 0.7rem;
   background: #F2F2F2;
 }
 
@@ -674,66 +726,6 @@ footer ul li a {
   justify-content: center;
   align-items: center;
   background: #F2F2F2;
-}
-
-@media (min-width: 1024px) {
-  /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps {
-    flex-flow: row wrap;
-    width: 100%;
-    padding-bottom: 40px;
-  }
-  #fonctionnement .steps_template {
-    max-width: 24%;
-  }
-
-  /******************* MENU ************************/
-  #entree, #plats, #desserts {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
-    position: relative;
-    width: 100%;
-  }
-  #entree .menus, #plats .menus, #desserts .menus {
-    width: 450px;
-  }
-
-  header .menu-header div {
-    justify-content: center;
-  }
-}
-@media (min-width: 700px) and (max-width: 1023px) {
-  /******************* FONCTIONNEMENT ************************/
-  #fonctionnement .steps {
-    align-items: center;
-  }
-
-  #restaurants .rest-container a {
-    width: 35%;
-  }
-
-  /******************* MENU ************************/
-  #entree, #plats, #desserts {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  #entree .menu-title::after, #plats .menu-title::after, #desserts .menu-title::after {
-    position: relative;
-    width: 100%;
-  }
-  #entree .menus, #plats .menus, #desserts .menus {
-    width: 450px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

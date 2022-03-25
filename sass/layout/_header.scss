@@ -2,39 +2,43 @@
 
 header {
      .logo-header {
-        @include flex-nowrap;
+        @include flex;
         @include flex-center;
-        height: 60px;
+        height: 4rem;
         & a {
-            font-size: 20px;
+            font-size: 1.3em;
             color: black;
             margin-right: auto;
-            margin-left: 20px;
+            margin-left: 1.3rem;
         }
         & img { margin-right:auto; }
     }
+    .menu1-bg {background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');}
+    .menu2-bg {background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');}
+    .menu3-bg {background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');}
+    .menu4-bg {background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');}
+
     .menu-header {
-        background-image: url('./../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
         background-size: cover;
         height: 300px;
-        @include flex-nowrap;
+        @include flex;
         align-items: flex-end;
 
         & div {
-            @include flex-nowrap;
+            @include flex;
             justify-content: space-around;
             align-items: center;
             background-color: $back-color;
-            padding-top: 30px;
+            padding-top: 2rem;
             width: 100%;
-            border-radius: 40px 40px 0px 0px;
+            border-radius: 2.7rem 2.7rem 0 0;
             font-family: "Shrikhand";
-            font-size: 25px;
+            font-size: 1.6em;
             margin-bottom: -2px;
     
             & i {
-                font-size: 20px;
-                padding-left: 30px;
+                font-size: 1.3em;
+                padding-left: 2rem;
                 @include inactive-heart;              
                 &:hover {  @include active-heart; }  
             }

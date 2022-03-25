@@ -48,36 +48,44 @@
 
 
 /******************* Menu Selection ************************/
-@-webkit-keyframes right-entrance {
-    from,to  {  right: -10%;}
-	100%      { right: 0%;}
-  }@keyframes right-entrance {
+@-webkit-keyframes right-in {
+    from,to  {  width: 0; right: -15%;}
+	100%      { width: 15%; right: 0%;}
+  } @keyframes right-in {
     from,to {
-        right: -10%;
+        width: 0;
+        right: -15%;
     }
     100% {
+        width: 15%;
         right: 0%;
     }
 }
 
+@-webkit-keyframes right-out {
+  from,to  { width: 15%; right: 0%;}
+100%      { width: 0; right: -15%;}
+} @keyframes right-out {
+  from,to {
+    width: 15%;
+    right: 0%;
+  }
+  100% {
+      width: 0%;
+      right: -15%;
+  }
+}
 /******************* Menu apparition ************************/
 @-webkit-keyframes menu-delay {
-    from,to  {  
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-	100%      { 
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from,to  {  opacity: 0;  transform: translateY(-10px); }
+	100%      { opacity: 1; transform: translateY(0);  }
   } @keyframes menu-delay {
-    
-        0% {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -6,10 +6,9 @@
             align-items: center;
         }
     }
-
-
+    
     #restaurants {
-        & .rest-container {
+        & .rest {
             & a {
                 width: 35%;
             }
@@ -25,12 +24,9 @@
             position: relative;
             width: 100%;
         }
-
         & .menus {
             width: 450px;
-        
         }
-
     }
 }
 

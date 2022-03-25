@@ -4,7 +4,8 @@
         & .steps {
             flex-flow: row wrap;
             width: 100%;
-            padding-bottom: 40px ;
+            padding-bottom: 2.7rem ;
+            justify-content: center;
             &_template {
                 max-width:24%
             }
@@ -19,11 +20,9 @@
             position: relative;
             width: 100%;
         }
-    
         & .menus {
             width: 450px;
         }
-    
     }
 
     header {

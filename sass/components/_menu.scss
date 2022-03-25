@@ -3,13 +3,10 @@
     font-weight: 500;
     &::after { 
         content: "";
-        position: absolute;
         display: block;
-        background: none repeat scroll 0 0 transparent;
         height: 3px;
-        width: 45px; 
+        width: 3rem; 
         background: $color-ter;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
         margin-top: 3px;
       }      
 }
@@ -17,29 +14,21 @@
 .menus {
     @include flex;
     flex-flow: column nowrap;
-    position:relative;
-    gap: 15px;
+    gap: 1rem;
     animation:menu-delay 3s both;
     
     & .menus_card {
         @include flex;
         @include nowrap;
-        position:relative;
-        min-width: 200px;
-        max-width: 95%;
-        width: 100%;
-        font-size: 15px;
-        font-weight: 400;
-        text-decoration: none;
+        font-size: 0.9em;
         overflow: hidden;
         background-color: white;
-        border-radius: 15px;
+        border-radius: 1rem;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         
         & .menus_card_desc {
             width: 90%;
-            min-width:0;
-            padding: 10px;
+            padding: 0.7rem;
             @include flex;
             @include wrap;
             justify-content: space-between;
@@ -48,10 +37,9 @@
             & .menus_card_desc_name {
                 width: 100%;
                 margin-left: auto;
-                font-weight: 900;
             }
             & span {
-                font-size: 13px;
+                font-size: 0.9em;
                 font-weight: 500;
                 max-width: 80%;
                 white-space: nowrap;
@@ -60,22 +48,23 @@
             }
         }   
         & .menus_card_selection {
-            display: none; 
+            @include flex;
             justify-content: center;
             align-items: center;
+            position:relative;
             font-size: larger;
-            width: 15%;
             color: white;
             background: $color-ter;
-            border-radius: 0px 15px 15px 0px;
-            animation:right-entrance 1s both;
-            
-            & i { @include checkicon-animation("spinicon");  }
+            border-radius: 0 1rem 1rem 0;          
+            transition: all 1s ease-in-out;
+            right: -15%;
+            width: 0;
         }
         &:hover {
             & .menus_card_selection {
-                position:relative;
-                @include flex;
+                right: 0;
+                width:15%;
+                & i { @include checkicon-animation("spinicon");  }
             }
         }
     }        
@@ -86,7 +75,7 @@
     }
     &::after {
         content: ' ';
-        margin-bottom: 20px;
+        margin-bottom: 1.3rem;
     }
 }
 

@@ -1,14 +1,12 @@
 /******************* COLORED BUTTON ************************/
 .colored-button {
     color: white;
-    background: $color-pri;
     background: linear-gradient(0deg, $color-pri 0%, $color-sec 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-size: 15px;
-    font-weight: 400;
-    padding: 15px 30px 15px 30px;
-    margin-bottom: 40px;
-    border-radius: 30px;
+    font-size: 1em;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 2rem;
     display: inline-block;
     &:hover {
         background: linear-gradient(0deg, lighten($color-pri, 5%) 0%, lighten($color-sec, 5%) 100%);
@@ -24,14 +22,14 @@
         box-sizing: border-box;
         position: absolute;
         align-self: flex-end;
-        width: 100px;
-        height: 30px;
+        width: 6.7rem;
+        height: 2rem;
         font-weight: 900;
         background-color: $color-ter;
         color: darken($color-ter, 30%);
         text-align: center;
         padding-top: 5px;
         border-radius: 5px;
-        margin: 0px 10px -45px 0px;
+        margin: 0 0.7rem -3rem 0;
     }
 }
